@@ -19,7 +19,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from utils.auth import init_session, is_authenticated, logout_user
-from pages import auth_page, home_page, prediction_page, dashboard_page
+from views import auth_page, home_page, prediction_page, dashboard_page
 
 # ── Global CSS ──────────────────────────────────────────────────────────────
 st.markdown("""
