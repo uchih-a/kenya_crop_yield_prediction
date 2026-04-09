@@ -132,9 +132,9 @@ def render():
     with col_right:
         # Quick-navigate cards
         pages = [
-            ("🔮", "Prediction", "prediction",
+            ("Prediction", "prediction",
              "Enter crop conditions and get instant yield forecasts with confidence intervals."),
-            ("📊", "Dashboard", "dashboard",
+            ("Dashboard", "dashboard",
              "Explore interactive visualisations of rainfall, temperature, and regional yield trends."),
         ]
         for icon, title, page_key, desc in pages:
