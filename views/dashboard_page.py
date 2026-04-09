@@ -410,7 +410,7 @@ def render():
             fname = f"agriyield_report_{datetime.now().strftime('%Y%m%d_%H%M')}.pdf"
             st.download_button(
                 label="⬇️ Download Report PDF",
-                data=pdf_bytes,
+                data=bytes(pdf_bytes),
                 file_name=fname,
                 mime="application/pdf",
                 key="dl_report",
