@@ -146,9 +146,9 @@ def render_sidebar():
             """, unsafe_allow_html=True)
 
             pages = {
-                "🏠  Home":       "home",
-                "🔮  Prediction": "prediction",
-                "📊  Dashboard":  "dashboard",
+                "Home":       "home",
+                "Prediction": "prediction",
+                "Dashboard":  "dashboard",
             }
             current = st.session_state.get("page", "home")
 
@@ -161,7 +161,7 @@ def render_sidebar():
                     st.rerun()
 
             st.markdown("<hr/>", unsafe_allow_html=True)
-            if st.button("🚪  Sign Out", use_container_width=True):
+            if st.button("Sign Out", use_container_width=True):
                 logout_user()
                 st.session_state.page = "auth"
                 st.rerun()
