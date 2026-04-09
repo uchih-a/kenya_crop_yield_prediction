@@ -248,12 +248,12 @@ def render():
 
         fc1, fc2, fc3, fc4, fc5 = st.columns([1.5, 1.5, 1, 1, 1.5])
         with fc1:
-            sel_region = st.selectbox("🗺️ Region", REGIONS, key="dash_region")
+            sel_region = st.selectbox("Region", REGIONS, key="dash_region")
         with fc2:
-            sel_crop   = st.selectbox("🌱 Crop", CROPS,    key="dash_crop")
+            sel_crop   = st.selectbox("Crop", CROPS,    key="dash_crop")
         with fc3:
             years      = sorted(df_full["Year"].unique())
-            sel_yr_min = st.selectbox("📅 From Year", years, index=0, key="dash_yr_min")
+            sel_yr_min = st.selectbox("From Year", years, index=0, key="dash_yr_min")
         with fc4:
             sel_yr_max = st.selectbox("To Year", years, index=len(years)-1, key="dash_yr_max")
         with fc5:
