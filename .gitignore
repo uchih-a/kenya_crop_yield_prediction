@@ -1,5 +1,4 @@
 # Secrets — NEVER commit
-.streamlit/secrets.toml
 .env
 
 # Python
@@ -18,8 +17,6 @@ venv/
 env/
 
 # Models (large files — manage with Git LFS or upload separately)
-model/*.h5
-model/*.pkl
 
 # Jupyter
 .ipynb_checkpoints/
