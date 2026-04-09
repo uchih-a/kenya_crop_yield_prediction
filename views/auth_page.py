@@ -164,11 +164,3 @@ def render():
                             unsafe_allow_html=True,
                         )
 
-        # ── Supabase notice ────────────────────────────────────────────────
-        st.markdown("""
-        <div class="ag-info" style='margin-top:1rem;font-size:0.82rem'>
-          ℹ️ <strong>Setup required:</strong> Add your Supabase credentials to 
-          <code>.streamlit/secrets.toml</code> and run the <code>supabase_schema.sql</code> 
-          migration. See the README for instructions.
-        </div>
-        """, unsafe_allow_html=True)
