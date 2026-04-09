@@ -25,7 +25,7 @@ def render():
     st.markdown("""
     <div style='margin-bottom:1.5rem'>
       <h1 style='font-family:"DM Serif Display",Georgia,serif;color:#1B4332;
-                 font-size:1.8rem;margin:0 0 0.3rem'>🔮 Yield Prediction</h1>
+                 font-size:1.8rem;margin:0 0 0.3rem'>Yield Prediction</h1>
       <p style='color:#52796F;margin:0;font-size:0.93rem'>
         Enter your field conditions below to generate an AI-powered crop yield forecast.
       </p>
@@ -47,10 +47,10 @@ def render():
         """, unsafe_allow_html=True)
 
         # ── Location & crop
-        region       = st.selectbox("🗺️ Region",       REGIONS,       key="pred_region")
-        crop         = st.selectbox("🌱 Crop Type",    CROPS,         key="pred_crop")
-        soil_texture = st.selectbox("🪨 Soil Texture", SOIL_TEXTURES, key="pred_soil_tex")
-        month        = st.selectbox("📅 Planting Month", MONTHS,      key="pred_month")
+        region       = st.selectbox("Region",       REGIONS,       key="pred_region")
+        crop         = st.selectbox("Crop Type",    CROPS,         key="pred_crop")
+        soil_texture = st.selectbox("Soil Texture", SOIL_TEXTURES, key="pred_soil_tex")
+        month        = st.selectbox("Planting Month", MONTHS,      key="pred_month")
         month_num    = MONTHS.index(month) + 1
 
         st.markdown("<hr style='border-color:#E8F5E9;margin:0.8rem 0'/>", unsafe_allow_html=True)
@@ -58,19 +58,19 @@ def render():
         # ── Climate inputs
         st.markdown("<div style='font-size:0.8rem;font-weight:600;color:#52796F;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem'>Climate</div>", unsafe_allow_html=True)
 
-        rainfall  = st.slider("🌧️ Rainfall (mm)",     0.0, 325.0, 80.0, 0.5, key="pred_rain",
+        rainfall  = st.slider("Rainfall (mm)",     0.0, 325.0, 80.0, 0.5, key="pred_rain",
                                help="Monthly rainfall in millimetres")
-        temp      = st.slider("🌡️ Temperature (°C)", 8.0, 45.0, 22.0, 0.1, key="pred_temp")
-        humidity  = st.slider("💧 Humidity (%)",      10.0, 100.0, 65.0, 0.5, key="pred_hum")
+        temp      = st.slider("Temperature (°C)", 8.0, 45.0, 22.0, 0.1, key="pred_temp")
+        humidity  = st.slider("Humidity (%)",      10.0, 100.0, 65.0, 0.5, key="pred_hum")
 
         st.markdown("<hr style='border-color:#E8F5E9;margin:0.8rem 0'/>", unsafe_allow_html=True)
 
         # ── Soil inputs
         st.markdown("<div style='font-size:0.8rem;font-weight:600;color:#52796F;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem'>Soil & Land</div>", unsafe_allow_html=True)
 
-        soil_ph    = st.slider("⚗️ Soil pH",           4.0, 9.0, 6.2, 0.01, key="pred_ph")
-        saturation = st.slider("🌊 Soil Saturation (%)", 5.0, 100.0, 49.0, 0.5, key="pred_sat")
-        land_size  = st.slider("📐 Land Size (acres)",   0.5, 10.0, 5.0, 0.1, key="pred_land")
+        soil_ph    = st.slider("Soil pH",           4.0, 9.0, 6.2, 0.01, key="pred_ph")
+        saturation = st.slider("Soil Saturation (%)", 5.0, 100.0, 49.0, 0.5, key="pred_sat")
+        land_size  = st.slider("Land Size (acres)",   0.5, 10.0, 5.0, 0.1, key="pred_land")
 
         st.markdown("</div>", unsafe_allow_html=True)
         st.markdown("<div style='height:0.5rem'></div>", unsafe_allow_html=True)
@@ -241,7 +241,7 @@ def render():
     show_recent = st.toggle("📋 Show Recent Predictions", key="toggle_recent")
 
     if show_recent:
-        tab_all, tab_mine = st.tabs(["🌍 All Users", "👤 My Predictions"])
+        tab_all, tab_mine = st.tabs(["All Users", "My Predictions"])
 
         with tab_all:
             with st.spinner("Loading predictions…"):
