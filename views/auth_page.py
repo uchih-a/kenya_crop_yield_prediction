@@ -35,7 +35,7 @@ def render():
     col1, col2, col3 = st.columns([1, 2, 1])
 
     with col2:
-        tab_login, tab_signup = st.tabs(["🔑  Sign In", "✨  Create Account"])
+        tab_login, tab_signup = st.tabs(["Sign In", "Create Account"])
 
         # ── LOGIN ──────────────────────────────────────────────────────────
         with tab_login:
