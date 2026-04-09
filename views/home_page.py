@@ -137,12 +137,11 @@ def render():
             ("Dashboard", "dashboard",
              "Explore interactive visualisations of rainfall, temperature, and regional yield trends."),
         ]
-        for icon, title, page_key, desc in pages:
+        for title, page_key, desc in pages:
             st.markdown(f"""
             <div class='ag-card' style='cursor:pointer;transition:transform 0.15s,box-shadow 0.15s'
                  onmouseenter="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(27,67,50,0.14)'"
                  onmouseleave="this.style.transform='';this.style.boxShadow=''">
-              <div style='font-size:1.8rem;margin-bottom:0.4rem'>{icon}</div>
               <div style='font-size:1.05rem;font-weight:700;color:#1B4332;margin-bottom:0.3rem'>{title}</div>
               <div style='font-size:0.87rem;color:#52796F;line-height:1.5'>{desc}</div>
             </div>
