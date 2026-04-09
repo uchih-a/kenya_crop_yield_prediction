@@ -400,7 +400,7 @@ def render():
         filters_desc = {
             "Region": sel_region,
             "Crop":   sel_crop,
-            "Years":  f"{sel_yr_min} – {sel_yr_max}",
+            "Years":  f"{sel_yr_min} - {sel_yr_max}",
         }
         with st.spinner("Generating report…"):
             pdf_bytes = generate_dashboard_report(df, filters_desc)
